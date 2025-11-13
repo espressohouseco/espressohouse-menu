@@ -2,6 +2,9 @@ backend:
   name: github
   repo: espressohouseco/espresso-house-menu
   branch: main
+  base_url: https://github.com
+  auth_type: implicit
+  app_id: YOUR_GITHUB_OAUTH_APP_ID
 
 media_folder: "images"
 public_folder: "/images"
