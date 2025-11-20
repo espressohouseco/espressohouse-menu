@@ -1,26 +1,37 @@
-
-<!DOCTYPE html>
-<html lang="fa">
+<!doctype html>
+<html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>Espresso House CMS</title>
-  <script src="https://unpkg.com/decap-cms@latest/dist/decap-cms.js"></script>
-
-<script>if(localStorage.getItem("cms_auth")!=="ok"){window.location.href="auth.html";}</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>پنل مدیریت اسپرسو هاوس</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #1b1512;
+      font-family: 'BTitr', Tahoma, sans-serif;
+      color: #f1e9d2;
+      text-align: center;
+    }
+    header {
+      background-color: #2a221b;
+      color: #d4a762;
+      padding: 1rem;
+      font-size: 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    }
+    #cms {
+      margin-top: 1.5rem;
+    }
+  </style>
 </head>
 <body>
+  <header>☕ پنل مدیریت منوی ESPRESSO HOUSE</header>
+  <div id="cms"></div>
   <script>
-    window.CMS_CONFIG = {
-      backend: {
-        name: 'github',
-        repo: 'espressohouseco/espressohouse-menu',
-        branch: 'main',
-        client_id: 'Ov23li9zk4qN39hsCuYG'
-      }
-    };
+    if (localStorage.getItem('cms_auth') !== 'ok') {
+      window.location.href = 'auth.html';
+    }
   </script>
-  <script>
-    CMS.init(window.CMS_CONFIG);
-  </script>
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>
