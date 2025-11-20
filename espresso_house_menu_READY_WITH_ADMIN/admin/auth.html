@@ -1,33 +1,31 @@
+
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-  <meta charset="UTF-8">
-  <title>ورود مدیریت - اسپرسو هاوس</title>
-  <style>
-    body {direction:rtl; font-family:tahoma; background:#1b1512; color:#fff; text-align:center; padding-top:120px;}
-    input {margin:6px; padding:8px;}
-    button {padding:8px 20px; background:#fff; border:none; cursor:pointer;}
-  </style>
-  <script>
-    async function login(e) {
-      e.preventDefault();
-      const user = document.getElementById('user').value;
-      const pass = document.getElementById('pass').value;
-      if (user === 'shahram' && pass === 'reza') {
-        localStorage.setItem('decap_auth','ok');
-        location.href = '/admin/';
-      } else {
-        alert('نام کاربری یا رمز اشتباه است!');
-      }
-    }
-  </script>
+<meta charset="UTF-8">
+<title>ورود مدیر</title>
+<style>
+  body {font-family: sans-serif; direction: rtl; text-align: center; margin-top: 10%;}
+  input {padding: 8px; margin: 10px; width: 180px;}
+  button {padding: 8px 20px;}
+</style>
+<script>
+function login() {
+  const u = document.getElementById('user').value;
+  const p = document.getElementById('pass').value;
+  if (u==='shahram' && p==='reza') {
+    localStorage.setItem('cms_auth','ok');
+    window.location.href='index.html';
+  } else {
+    alert('نام کاربری یا رمز عبور اشتباه است');
+  }
+}
+</script>
 </head>
 <body>
-  <h2>ورود به پنل مدیریت اسپرسو هاوس</h2>
-  <form onsubmit="login(event)">
-    <input id="user" placeholder="نام کاربری"><br>
-    <input id="pass" type="password" placeholder="رمز عبور"><br>
-    <button type="submit">ورود</button>
-  </form>
+  <h2>ورود به پنل مدیریت</h2>
+  <input id="user" placeholder="نام کاربری"><br>
+  <input id="pass" type="password" placeholder="رمز عبور"><br>
+  <button onclick="login()">ورود</button>
 </body>
 </html>

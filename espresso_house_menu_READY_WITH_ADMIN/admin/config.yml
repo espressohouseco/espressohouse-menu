@@ -1,9 +1,11 @@
+
 backend:
   name: github
   repo: espressohouseco/espressohouse-menu
   branch: main
   base_url: https://menu.espressohouse-co.workers.dev
   auth_endpoint: auth
+  client_id: Ov23li9zk4qN39hsCuYG
 
 media_folder: "images"
 public_folder: "/images"
