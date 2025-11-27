@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Authenticating...</title>
+  </head>
+  <body>
+    <script>
+      if (window.location.search.includes('code=')) {
+        localStorage.setItem('netlify-cms-auth', window.location.search);
+        window.location.replace(window.location.origin + '/admin/');
+      } else {
+        document.body.textContent = 'Authentication failed. Please try again.';
+      }
+    </script>
+  </body>
+</html>
